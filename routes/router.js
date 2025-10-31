@@ -13,7 +13,12 @@ router.get('/', (req, res)=> {
 const endpoints = [
     'comedy',
     'animation',
-    'drama'
+    'drama',
+    'classic',
+    'horror',
+    'family',
+    'mystery',
+    'western'
 ]
 
 endpoints.forEach(endpoint => {

@@ -1,18 +1,18 @@
 const router = require('express').Router()
 const axios = require('axios')
 
-// http://localhost:3000/drama
+// http://localhost:3000/mystery
 router.get('/', (req, res)=> {
 
-    const url = 'https://api.sampleapis.com/movies/drama/'
+    const url = 'https://api.sampleapis.com/movies/mystery/'
 
     axios.get(url)
     .then(resp => {
         res.render('pages/allMovies', {
-            title: 'Drama',
-            name: 'Drama',
+            title: 'Mystery',
+            name: 'Mystery',
             data: resp.data,
-            endpoint: 'drama'
+            endpoint: 'mystery'
         })
     })
 })
@@ -20,7 +20,7 @@ router.get('/', (req, res)=> {
 // single page
 router.get('/:id', (req, res)=> {
     const id = req.params.id
-    const url = `https://api.sampleapis.com/movies/drama/${id}`
+    const url = `https://api.sampleapis.com/movies/mystery/${id}`
 
     axios.get(url)
     .then(resp => {

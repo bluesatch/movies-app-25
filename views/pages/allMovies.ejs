@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="main">
+    <div>
+        <% data.forEach(movie => { %>
+            <figure>
+                <img src="<%= movie.posterURL %>" alt="poster for <%= movie.title %>">
+                <figcaption>
+                    <a href="/<%= endpoint %>/<%= movie.id %>">
+                        <%= movie.title %>
+                    </a>
+                </figcaption>
+            </figure>
+        <% }) %>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>
